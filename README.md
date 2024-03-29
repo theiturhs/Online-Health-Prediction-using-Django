@@ -66,18 +66,18 @@ Navigate to http://127.0.0.1:8000/ in your browser
 Here is the breakdown of Django project structure:
 
 * **predictHealth (Folder)**
-  > This is the main root directory of Django project. It contains manage.py file, which is the primary script for managing this Django application.
+  This is the main root directory of Django project. It contains manage.py file, which is the primary script for managing this Django application.
 
 * **home (Folder):**
-  > This is a Django app. Django apps are reusable components that contain models, views, and other logic specific to a particular functionality.
+  This is a Django app. Django apps are reusable components that contain models, views, and other logic specific to a particular functionality.
 
 * **static (Folder)**: This folder stores static files that are served directly by the web server without being processed by Django. This folder contains: 
-  > CSS files, Images
-  > CSV files: Dataset used for training models (source: kaggle)
-  > encoders: Folder containing encoders for prediction models.
-  > models for prediction: This folder contains saved models for prediction/
-  > templates (Folder): This folder contains HTML template files.
-  > requirements.txt: This file is for managing dependencies. It lists all the required Python packages and libraries needed for this project to function.
+  * CSS files, Images
+  * CSV files: Dataset used for training models (source: kaggle)
+  * encoders: Folder containing encoders for prediction models.
+  * models for prediction: This folder contains saved models for prediction/
+  * templates (Folder): This folder contains HTML template files.
+  * requirements.txt: This file is for managing dependencies. It lists all the required Python packages and libraries needed for this project to function.
 
 ## Tech-Stack
 
@@ -93,4 +93,6 @@ This section shows the results (Screenshots and Videos)
 
 ### Video Results
 
-Check
+Check the entire working of project [here](https://drive.google.com/file/d/17LdDk3xNLKat1gTwyN_oYtzfw24Mu4Z8/view?usp=drive_link)
+
+
