@@ -160,3 +160,7 @@ This section shows the results (Screenshots and Videos)
 * [Django Documentation](https://docs.djangoproject.com/en/5.0/)
 * [Boostrap Examples](https://getbootstrap.com/docs/4.0/examples/)
 * [w3schools](https://www.w3schools.com/)
+
+## Contact Details
+
+* [Connect on LinkedIn](https://www.linkedin.com/in/shrutikshrivastava/)
