@@ -1,0 +1,145 @@
+{% extends "login_base.html" %}
+
+{% block title %}Report{% endblock title %}
+
+{% block body %}
+
+<style>
+    /* Hide the print button when printing */
+@media print {
+    #printButton {
+        display: none !important;
+    }
+}
+
+</style>
+
+<div class="container">
+    <main role="main" class="container">
+        <h1 class="mt-5 text-dark py-3">Prediction Medical Report</h1>
+        <h6 class="text-muted">Medical Report Generated from Online Prediction</h6><br><hr><br>
+        <p>
+            <i>Dear <b style="text-transform: capitalize;">{{user_name}}</b>,<br><br>
+            We are pleased to provide you with your online prediction medical report. 
+            This report pertains to a medical test conducted for <b>{{user_info.test_type}}</b>, 
+            which was administered on <b>{{user_info.date}}</b>. 
+            Based on the symptoms provided, your current health status is 
+            indicated as <b>{{user_info.result}}</b>. We recommend that you consult with 
+            a medical professional using this report as a reference. 
+            Please download and keep this report for future reference.</i>
+        </p>
+
+    <br>
+    
+    <h5 class="text-primary"><b>Personal Information</b></h5>
+    <div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="well bg-white text-muted py-2"><b>Name</b></div>
+                <div class="well bg-light py-2 px-2 border rounded" style="text-transform: capitalize;">{{user_name}}</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="well bg-white text-muted py-2"><b>Date of Birth</b></div>
+                <div class="well bg-light py-2 px-2 border rounded">{{user_info.dob}}</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="well bg-white text-muted py-2"><b>Gender</b></div>
+                <div class="well bg-light py-2 px-2 border rounded">{{user_info.gender}}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="well bg-white text-muted py-2"><b>Height</b></div>
+                <div class="well bg-light py-2 px-2 border rounded">{{user_info.height}} cm</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="well bg-white text-muted py-2"><b>Weight</b></div>
+                <div class="well bg-light py-2 px-2 border rounded">{{user_info.weight}} kg</div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="well bg-white text-muted py-2"><b>Profession</b></div>
+                <div class="well bg-light py-2 px-2 border rounded">{{user_info.profession}}</div>
+            </div>
+        </div>
+        <br><br>
+        <h5 class="text-primary"><b>Medical Update</b></h5>
+        <div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="well bg-white text-muted py-2"><b>Test Taken</b></div>
+                    <div class="well bg-light py-2 px-2 border rounded"><b>{{user_info.test_type}}</b></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="well bg-white text-muted py-2"><b>Date of Medical Test</b></div>
+                    <div class="well bg-light py-2 px-2 border rounded"><b>{{user_info.date}}</b></div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="well bg-white text-muted py-2"><b>Symptoms</b></div>
+            <div class="row">
+                <br>
+                {% for attr, value in attributes_values.items %}
+                <div class="col-md-4">
+                    <div class="well bg-light mb-3 py-2 px-2 border rounded">
+                        <div class="font-weight-bold">{{ attr }}</div>
+                        <div class="text-danger font-weight-bold">{{ value }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="well bg-white text-muted py-2"><b>Expert Diagnose</b></div>
+                    <div class="well bg-light py-2 px-2 border rounded text-success"><b>{{user_info.result}}</b></div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="well bg-white text-muted py-2"><b>Expert Advise</b></div>
+                    <div class="well bg-light py-2 text-muted px-2 border rounded"><i>{{user_info.advice}}</i></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="printButton" class="print-button my-4 col-md-12 btn btn-primary" onclick="printToPDF()">Print Report</button>
+        <p>
+            <i>We hope you have found the information provided helpful in addressing your concerns. Should you require any further assistance or have additional questions, please do not hesitate to reach out to us.<br><br>
+            Thank you for choosing our services. We appreciate the opportunity to assist you.<br><br>
+            <b>
+                Best Regards,<br>
+            Team Online Health Prediction
+            </b></i>
+        </p>
+        
+
+    </div>
+
+</main>
+</div>
+
+<script>
+    function printToPDF() {
+
+        var printButton = document.getElementById("printButton");
+        if (printButton) {
+            printButton.style.display = "none";
+        }
+
+        window.print();
+        if (printButton) {
+            printButton.style.display = "block";
+        }
+    }
+</script>
+
+{% endblock body %}

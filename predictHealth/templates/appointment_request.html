@@ -1,0 +1,48 @@
+{% extends "doctor_base.html" %}
+
+{%block title%}Appointment Requests{%endblock title%}
+
+{%block body%}
+
+<div class="container">
+    <h1 class="my-2 text-muted py-4 border-bottom">Pending Appointments</h1>
+    <div class="row my-3">
+        {% for app in appointment %}
+        <div class="col-sm-12 my-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-capitalize">
+                        <b>Patient: </b> {{ app.user.first_name }} {{ app.user.last_name }}
+                    </h5>
+    
+                    <p class="card-text text-muted">
+                        <i>
+                            email: {{ app.email }}<br>phone: {{ app.phone }}
+                        </i>
+                    </p>
+                    <hr>
+                    <p><b>Appointment Date: </b>{{ app.appointmentDate.date }}</p>
+                    <hr><p class="text-danger"><b>Status: {{ app.status }}</b></p>
+                    <hr>
+                    <p><b>Message: </b>
+                    <i class="text-muted">
+                        {{ app.message }}
+                    </i>
+                    </p>
+    
+
+                    <form method="post" action="{% url 'update_status' app.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>
+
+
+{%endblock body%}

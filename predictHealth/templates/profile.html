@@ -1,0 +1,60 @@
+{% extends "login_base.html" %}
+
+{%block title%}Complete Profile{%endblock title%}
+
+{%block body%}
+    <div style="display: flex; flex-wrap: wrap;">
+        <div class="jumbotron p-3 p-md-5 text-dark rounded bg-white my-4 col-md-4">
+            <div class="col-md-12 px-0">
+                <h3 class="display-5 font-italic">Follow these easy steps to get started:</h3>
+                <ul>
+                    <li class='lead my-3'>Complete your profile</li>
+                    <li class='lead my-3'>Switch to <b><i>Test Now</i></b> tab to predict health</li>
+                    <li class='lead my-3'>Switch to <b><i>Prediction History</i></b> tab to receive health History</li>
+                    <li class='lead my-3'>Switch to <b><i>Appointment</i></b> tab to schedule appointment with doctor</li>
+                    
+                </ul>
+            </div>
+
+        </div>
+
+        <div class = "jumbotron p-3 p-md-5 text-dark rounded bg-white my-4 col-md-8">
+            <form method="post">
+                {% csrf_token %}
+                <label for="dob">Date of Birth</label><br>
+                <input type="date" id="dob" name="dob" class = "form-control col-md-12" required><br>
+        
+                <label for="gender">Gender</label><br>
+                <select id="gender" name="gender" class = "form-control col-md-12" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+        
+                <label for="height">Height (cm)</label><br>
+                <input type="number" id="height" name="height" class = "form-control col-md-12" min=10 required><br>
+        
+                <label for="weight">Weight (kg)</label><br>
+                <input type="number" id="weight" name="weight" class = "form-control col-md-12" min=10 required><br>
+                
+                <label for="profession">Profession</label><br>
+                <select name="profession" class = "form-control col-md-12" required>
+                    <option value="Doctor">Home Maker</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Sales Representative">Sales Representative</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Engineer">Engineer</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Scientist">Scientist</option>
+                    <option value="Lawyer">Lawyer</option>
+                    <option value="Salesperson">Salesperson</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Manager">Others</option>
+                </select><br>
+
+        
+                <button type="submit" class="btn btn-primary col-md-12 my-2">Save Profile</button>
+        </div>
+    </div>
+{%endblock body%}

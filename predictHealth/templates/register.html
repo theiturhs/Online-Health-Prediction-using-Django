@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{%block title%}User Registration{%endblock title%}
+
+{%block body%}
+    <div class = "main my-4" style = 'display: flex; flex-wrap: wrap; justify-content: center;'>
+        
+        <div class = "col-md-4">
+            <h1 style="text-align: center;">REGISTRATION</h1>
+            <p style="text-align: center;"><i>Welcome to Health Prediction application!</i></p>
+            
+            <img src="/static/register.webp" style="width: 100%;" alt="Doctor">
+            <br><br>
+            <p><b>Benifits of Registration</b></p>
+            <ul>
+                <li>Schedule appointments with healthcare professionals.</li>
+                <li>Consult with doctors according to your specific needs.</li>
+                <li>Receive your online health report.</li>
+            </ul>
+            
+        </div>
+
+        <div class = "col-md-8">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br>
+                <button type="submit" class = "col-md-10 btn btn-primary">Register</button>
+            </form>
+        </div>
+        
+
+    </div>
+{%endblock body%}
