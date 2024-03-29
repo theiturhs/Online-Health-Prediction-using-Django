@@ -1,0 +1,32 @@
+{% extends "login_base.html" %}
+
+{% block title %}User History{% endblock title %}
+
+{% block body %}
+<div class="container my-4">
+
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h3 class="my-3 pb-2 mb-0">Medical History</h3>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Test Taken</th>
+                    <th scope="col">Date of Examination</th>
+                    <th scope="col">Predicted Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for history_entry in user_medical_history reversed%}
+                <tr>
+                    <td>{{ history_entry.test_type }}</th>
+                    <td>{{ history_entry.date }}</td>
+                    <td class="text-success"><b>{{ history_entry.result }}</b></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock body %}

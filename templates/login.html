@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{%block title%}Login{%endblock title%}
+
+{%block body%}
+<div class = "container my-5" style = "display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h1>Login</h1>
+    <p class="text-center text-muted"><i>Welcome back! Let's get back to think about our health!</i></p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" class="col-md-12 my-3" style="height: 40px">
+        
+        <input type="password" name="password" placeholder="Password" class="col-md-12 my-3" style="height: 40px">
+        <br>
+        <button type="submit" class = "btn btn-primary col-md-12 my-4" style="height: 40px;">Login</button>
+    </form>
+</div>
+{%endblock body%}

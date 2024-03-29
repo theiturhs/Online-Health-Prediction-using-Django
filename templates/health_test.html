@@ -1,0 +1,43 @@
+{% extends "login_base.html" %}
+
+{%block title%}Take Prediction{%endblock title%}
+
+{%block body%}
+
+<div class="container my-5">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h3><strong class="d-inline-block mb-2 text-dark my-4">Mental Disorder Prediction</strong></h3>
+                    <p class="card-text text-muted mb-auto">Mental disorder Problem: A mental disorder is a clinically significant behavioral or psychological pattern that causes distress or impairment in functioning.</p>
+                    <a class="btn btn-outline-dark px-4 py-2 my-4" href="/mental_disorder">Take mental disorder prediction</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h3><strong class="d-inline-block mb-2 text-dark my-4">PCOS Prediction</strong></h3>
+                    <p class="card-text text-muted mb-auto">PCOS problem: PCOS (Polycystic Ovary Syndrome) is a hormonal disorder characterized by enlarged ovaries with small cysts and symptoms like irregular periods and excess androgen levels.</p>
+                    <a class="btn btn-outline-dark px-4 py-2 my-4" href="/pcos">Take PCOS prediction</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h3><strong class="d-inline-block mb-2 text-dark my-4">Obesity Prediction</strong></h3>
+                    <p class="card-text text-muted mb-auto">Obesity Problem: Obesity is a medical condition characterized by an excessive accumulation of body fat, to the extent that it may have a negative effect on health.</p>
+                    <a class="btn btn-outline-dark px-4 py-2 my-4" href="/obesity">Take Obesity prediction</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{%endblock body%}

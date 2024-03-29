@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block title%}Doctor Login{%endblock title%}
+
+{%block body%}
+<div class = "container my-5" style = "display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h1>Doctor Login</h1>
+    <p class="text-center text-muted"><i>Welcome back! Let's get back to think about our health!</i></p>
+    <form method="post" action="/doctor_login">
+        {% csrf_token %}
+        
+        <input type="hidden" name="is_doctor" value="1">
+    
+        <input type="text" name="username" placeholder="Username" class="col-md-12 my-3" style="height: 40px">
+        
+        <input type="password" name="password" placeholder="Password" class="col-md-12 my-3" style="height: 40px">
+        <br>
+        <input type="text" name="phone" placeholder="Phone Number" class="col-md-12 my-3" style="height: 40px"><br>
+        <button type="submit" class="btn btn-primary col-md-12 my-4" style="height: 40px;">Login as Doctor</button>
+    </form>
+    
+</div>
+{%endblock body%}

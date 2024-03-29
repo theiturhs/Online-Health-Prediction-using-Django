@@ -1,0 +1,7 @@
+django == 5.0.2
+pandas
+numpy
+keras
+tensorflow
+joblib
+scikit-learn

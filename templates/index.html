@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{%block title%}HOME{%endblock title%}
+
+{%block body%}
+
+<style>
+    html {
+        overflow-x: hidden;
+    }
+</style>
+
+<div class="container my-4">
+    <main role="main">
+        <section class="jumbotron text-center my-5 bg-white">
+            <div class="container">
+                <h1 class="jumbotron-heading"><b>WELCOME TO <span class="text-info">ONLINE HEALTH PREDICTION</span></b>
+                </h1>
+                <p class="lead text-muted py-2">
+                    <b>
+                        "Unveil Your Health Journey: Empower Yourself with Our Comprehensive Online Health Prediction
+                        Test. Gain Insights, Take Control, and Embrace Wellness Today!"
+                    </b>
+                </p>
+                <p>
+                    <a class="btn btn-info my-2" href="/register">Get Started</a>
+                    <a href="/login" class="btn btn-secondary my-2">Login Now</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <hr>
+
+    <div class="row my-5 bg-white">
+        <div class="col-md-4 p-5">
+            <h2 class="text-muted">Take Online Test</h2><br>
+            <p class="lead">Engage in online assessments tailored to your health concerns, providing valuable insights and guidance for optimizing your overall health and lifestyle.</p>
+        </div>
+        <div class="col-md-4 p-5">
+            <h2 class="text-muted">Fix Appointment</h2><br>
+            <p class="lead">Seamlessly book appointments to consult with healthcare professionals and specialists, ensuring timely access to expert advice and support. </p>
+        </div>
+        <div class="col-md-4 p-5">
+            <h2 class="text-muted">Obtain Report</h2><br>
+            <p class="lead">Effortlessly retrieve detailed reports summarizing your health status, enabling informed decision-making and proactive management of your well-being.</p>
+        </div>
+    </div>
+    <hr>
+
+    <main role="main">
+        <section class="jumbotron text-center my-5 bg-white">
+            <div class="container">
+                <h1 class="jumbotron-heading">Are you a Doctor?</h1>
+                <p class="lead text-muted py-2">
+                    <b>
+                        "Register Yourself to Become a Valuable Contributor to Our Health Community. Share Your
+                        Expertise, Provide Support, and Make a Difference in Others' Lives. Schedule Appointments
+                        Conveniently to Engage with Clients and Offer Vital Assistance."
+                    </b>
+                </p>
+                <p>
+                    <a class="btn btn-info px-4 py-2 my-2" href="/doctor_register">Doctor Registration</a>
+                    <a class="btn btn-secondary px-4 py-2 my-2" href="/doctor_login">Doctor Login</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <hr>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+{%endblock body%}

@@ -1,0 +1,26 @@
+{% extends "doctor_base.html" %}
+
+{%block title%}Dashboard{%endblock title%}
+
+{%block body%}
+
+<div class="container">
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h2 class="pb-2 mb-0 text-capitalize">
+            <b>Dr. {{doctor.first_name}} {{doctor.last_name}}</b>
+        </h2>
+        <h6 class="text-muted">{{ doctor.education }}</h6>
+        <hr>
+        <p class="py-3"><i>{{doctor.about}}</i></p>
+
+        <p><b>Specialization:</b> {{ doctor.specialization }} </p>
+        <p><b>Hospital:</b> {{ doctor.hospital }} </p>
+        <p><b>Expertise:</b> {{ doctor.expertise }} </p>
+        <p><b>Experience:</b> {{ doctor.experience }} </p>
+        <p><b>Languages Known:</b> {{ doctor.languages }} </p>
+        <p><b>Phone:</b> {{ doctor.phone }} </p>
+        <p><b>Location:</b> {{ doctor.city }}, {{ doctor.state }}, {{ doctor.country }} </p>
+    </div>
+</div>
+
+{%endblock body%}
