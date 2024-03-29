@@ -1,8 +1,6 @@
 # Online-Health-Prediction-using-Django
-==========
 
 ## Introduction
-=========
 
 This project proposes **Django-based Online Health Prediction platform**. This platform utilizes machine learning models to provide online predictions for various health conditions, including **mental disorders, polycystic ovary syndrome (PCOS), and obesity**. These predictions stem from trained models using datasets sourced from **Kaggle**. In addition to offering predictive health analysis, the platform allows users to have the option to download their online health reports generated from the predictions. Moreover, they can conveniently schedule appointments with healthcare professionals by providing their contact details and sending messages directly through the platform. For healthcare professionals, the platform offers the capability to register and manage appointments. Doctors can view and accept appointment requests sent by users.
 
@@ -11,10 +9,11 @@ This project proposes **Django-based Online Health Prediction platform**. This p
 * [Introduction](#Introduction)
 * [Features](#Features)
 * [Setup](#Setup)
+* [About files and folders](#Structure)
+* [Tech-Stack](#Tech-Stack)
 * [Results](#Results)
 
 ## Features
-========
 
 * **Online Health Predictions:** The project has the ability to provide online predictions for mental disorders, PCOS, and obesity based on machine learning models trained on Kaggle datasets.
 * **Health Report Download:** The project allows users to download their online health reports generated from the predictions.
@@ -24,7 +23,6 @@ This project proposes **Django-based Online Health Prediction platform**. This p
 * **Appointment Management:** This project allows registered doctors to view and manage appointment requests sent by users, streamlining the appointment scheduling process.
 
 ## Setup
-========
 
 * Change the directory to Project
 
@@ -63,8 +61,36 @@ python manage.py runserver
 Navigate to http://127.0.0.1:8000/ in your browser
 ```
 
-## About files and folders
-========
+## Structure
 
-The breakdown of Django project structure:
+Here is the breakdown of Django project structure:
 
+* **predictHealth (Folder)**
+  > This is the main root directory of Django project. It contains manage.py file, which is the primary script for managing this Django application.
+
+* **home (Folder):**
+  > This is a Django app. Django apps are reusable components that contain models, views, and other logic specific to a particular functionality.
+
+* **static (Folder)**: This folder stores static files that are served directly by the web server without being processed by Django. This folder contains: 
+  > CSS files, Images
+  > CSV files: Dataset used for training models (source: kaggle)
+  > encoders: Folder containing encoders for prediction models.
+  > models for prediction: This folder contains saved models for prediction/
+  > templates (Folder): This folder contains HTML template files.
+  > requirements.txt: This file is for managing dependencies. It lists all the required Python packages and libraries needed for this project to function.
+
+## Tech-Stack
+
+* Frontend: HTML, CSS, Bootstrap
+* Backend: Python, Django, Sqlite3
+
+## Django Version
+> Django Version: 5.0.2
+
+## Results
+
+This section shows the results (Screenshots and Videos)
+
+### Video Results
+
+Check
